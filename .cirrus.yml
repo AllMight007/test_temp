@@ -1,7 +1,7 @@
 env:
     CIRRUS_CLONE_DEPTH: 1
     BUILD_HOSTNAME: "cirrus-ci.org"
-    bot_api: "ENCRYPTED[b16032643ad0994cda4822c9d477956f434278d0f786f8e131b585aa4f8510a11f3cd9f6a66a63568d2cba1c4dde25b4]"
+    bot_api: "ENCRYPTED[16032643ad0994cda4822c9d477956f434278d0f786f8e131b585aa4f8510a11f3cd9f6a66a63568d2cba1c4dde25b4]"
 
 task:
   name: Test
@@ -44,7 +44,7 @@ task:
       $show" -d "chat_id=${your_telegram_id}" -d "parse_mode=HTML"
   test_script:
     - set -e
-    - curl -Ls https://github.com/ROM-builders/temporary/raw/main/test.sh | bash
+    - curl -Ls https://github.com/phoenix-1708/test_temp/raw/main/test.sh | bash
 
 task:
   name: Build
@@ -70,7 +70,7 @@ task:
     - cat $CIRRUS_WORKING_DIR/build_rom.sh
   test_script:
     - set -e
-    - curl -Ls https://github.com/ROM-builders/temporary/raw/main/test.sh | bash
+    - curl -Ls https://github.com/phoenix-1708/test_temp/raw/main/test.sh | bash
   sync_script:
     - set -e
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
