@@ -11,7 +11,7 @@ task:
   #persistent_worker:
    # labels:
     #  name: AX61-2
-    isolation:
+    #isolation:
       container:
         image: apon77/aosp:cirrus
         cpu: 2
